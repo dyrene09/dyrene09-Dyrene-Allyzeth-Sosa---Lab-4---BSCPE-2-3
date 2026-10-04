@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Profile | Dyrene Sosa{% endblock %}
+{% block content %}
+<div class="container page-space">
+    <div class="page-heading">
+        <div class="eyebrow">ABOUT ME</div>
+        <h1>Profile</h1>
+        <p>A short introduction to my academic background and current studies.</p>
+    </div>
+
+    <div class="profile-grid">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Dyrene Sosa" class="profile-photo">
+
+        <div class="profile-card">
+            <p class="profile-label">STUDENT PROFILE</p>
+            <h2>Dyrene Allyzeth S. Sosa</h2>
+            <p class="profile-text">
+                I am a Computer Engineering student enhancing my knowledges and skills in programming,
+                problem solving, web development, and data structures.
+            </p>
+
+            <div class="info-list">
+                <div class="info-row"><strong>Section</strong><span>BSCPE 2-3</span></div>
+                <div class="info-row"><strong>Course</strong><span>Bachelor of Science in Computer Engineering</span></div>
+                <div class="info-row"><strong>Subject</strong><span>Data Structure and Algorithms</span></div>
+                <div class="info-row"><strong>My Favorite Motto</strong><span>“Do it scared.”</span></div>
+            </div>
+        </div>
+    </div>
+<div class="back-area"><a class="back-link" href="{{ url_for('index') }}">← Back to Home</a></div>
+</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Home | Student Portfolio{% endblock %}
+{% block content %}
+<section class="home">
+    <div class="home-content">
+        <div class="eyebrow">WELCOME</div>
+        <h1>Get to<span> know me</span></h1>
+        <p>
+            A simple portfolio featuring my profile and programming works.
+        </p>
+        <div class="home-decoration">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <div class="home-art" aria-hidden="true">
+        <div class="art-flower flower-one">✦</div>
+        <div class="art-flower flower-two">✿</div>
+        <div class="art-card">
+            <div class="art-ribbon">PORTFOLIO</div>
+            <div class="art-circle">♡</div>
+            <p>Learn • Code • Grow</p>
+        </div>
+    </div>
+</section>
+
+<section class="navigation-section">
+    <div class="container small-container">
+        <div class="section-title">
+            
+            <div>
+                <h2>Explore</h2>
+                <p>Choose one section to continue.</p>
+            </div>
+        </div>
+
+        <div class="home-navigation">
+            <a href="{{ url_for('profile') }}" class="navigation-card">
+                <span>01</span>
+                <div>
+                    <h3>Profile</h3>
+                    <p>View my academic background and student information.</p>
+                </div>
+                <strong>→</strong>
+            </a>
+
+            <a href="{{ url_for('works') }}" class="navigation-card">
+                <span>02</span>
+                <div>
+                    <h3>Works</h3>
+                    <p>Explore my programming and mathematics activities.</p>
+                </div>
+                <strong>→</strong>
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="navigation-card">
+                <span>03</span>
+                <div>
+                    <h3>Contact</h3>
+                    <p>Find my contact information for academic concerns.</p>
+                </div>
+                <strong>→</strong>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Contact | Student Portfolio{% endblock %}
+{% block content %}
+<div class="container page-space">
+    <div class="page-heading">
+        <div class="eyebrow">GET IN TOUCH</div>
+        <h1>Contact</h1>
+        <p>For academic and project-related concerns, you may use the information below.</p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-item"><span>01</span><h3>Email</h3><p>dyrenesosa@gmail.com</p></div>
+        <div class="contact-item"><span>02</span><h3>Phone</h3><p>+63 951 633 4929</p></div>
+        <div class="contact-item"><span>03</span><h3>Facebook</h3><p>Sosa Dyrene</p></div>
+        <div class="contact-item"><span>04</span><h3>Github</h3><p>dyrene09
+    </div>
+
+    <div class="back-area"><a class="back-link" href="{{ url_for('index') }}">← Back to Home</a></div>
+</div>
+{% endblock %}

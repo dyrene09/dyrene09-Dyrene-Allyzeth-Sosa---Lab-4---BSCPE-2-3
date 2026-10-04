@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Uppercase Converter | Dyrene Sosa{% endblock %}
+{% block content %}
+<div class="container page-space">
+    <div class="page-heading">
+        <div class="eyebrow">WORK 01 · STRING</div>
+        <h1>Uppercase Converter</h1>
+        <p>Enter a word or sentence and convert it into uppercase.</p>
+    </div>
+
+    <div class="form-card">
+        <form action="{{ url_for('uppercase') }}" method="post">
+            <label for="inputString">Your text</label>
+            <input type="text" id="inputString" name="inputString" placeholder="Type something here..." required>
+            <button type="submit">Convert Text</button>
+        </form>
+
+        {% if result is not none %}
+        <div class="result">
+            <span>Result</span>
+            <strong>{{ result }}</strong>
+        </div>
+        {% endif %}
+
+        <a class="back-link" href="{{ url_for('index') }}">← Back to Home</a>
+    </div>
+</div>
+{% endblock %}

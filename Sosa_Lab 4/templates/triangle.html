@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Area of a Triangle | Dyrene Sosa{% endblock %}
+{% block content %}
+<div class="container page-space">
+    <div class="page-heading">
+        <div class="eyebrow">WORK 03 · MATHEMATICS</div>
+        <h1>Area of a Triangle</h1>
+        <p>Enter the base and height to calculate the area of a triangle.</p>
+    </div>
+
+    <div class="form-card">
+        <form action="{{ url_for('triangle') }}" method="post">
+            <label for="base">Base</label>
+            <input type="number" step="any" min="0" id="base" name="base" placeholder="Enter base" required>
+
+            <label for="height">Height</label>
+            <input type="number" step="any" min="0" id="height" name="height" placeholder="Enter height" required>
+
+            <button type="submit">Calculate Area</button>
+        </form>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if result is not none %}
+        <div class="result">
+            <span>Result</span>
+            <strong>{{ "%.2f"|format(result) }} square units</strong>
+        </div>
+        {% endif %}
+
+        <a class="back-link" href="{{ url_for('index') }}">← Back to Home</a>
+    </div>
+</div>
+{% endblock %}

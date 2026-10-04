@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Works | Dyrene Sosa{% endblock %}
+{% block content %}
+<div class="container page-space">
+    <div class="page-heading">
+        <div class="eyebrow">MY PROJECTS</div>
+        <h1>Works</h1>
+        <p>Choose an activity below and use the simple form to see the result.</p>
+    </div>
+
+    <div class="works-grid">
+        {% for work in works %}
+        <article class="work-card">
+            <div class="work-number">{{ work.number }}</div>
+            <div class="work-type">{{ work.type }}</div>
+            <h2>{{ work.title }}</h2>
+            <p>{{ work.description }}</p>
+            <a class="button primary" href="{{ url_for(work.url if work.url == 'uppercase' else 'acircle' if work.url == 'circle' else 'triangle') }}">Open Activity</a>
+        </article>
+        {% endfor %}
+    </div>
+
+    <div class="tech-note">
+        <strong>Built with:</strong> Python · Flask · HTML · CSS · Data Structures
+    </div>
+    <div class="back-area"><a class="back-link" href="{{ url_for('index') }}">← Back to Home</a></div>
+</div>
+{% endblock %}
